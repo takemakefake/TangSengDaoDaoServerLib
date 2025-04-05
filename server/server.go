@@ -6,11 +6,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/config"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/module"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/log"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/register"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/wkhttp"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/config"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/module"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/log"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/register"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/wkhttp"
 	"github.com/judwhite/go-svc"
 	"github.com/unrolled/secure"
 )

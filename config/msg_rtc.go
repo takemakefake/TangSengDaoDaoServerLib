@@ -3,8 +3,8 @@ package config
 import (
 	"fmt"
 
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/common"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/util"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/common"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/util"
 )
 
 // rtc 挂断

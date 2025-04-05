@@ -1,11 +1,11 @@
 package testutil
 
 import (
-	// "github.com/TangSengDaoDao/TangSengDaoDaoServer/modules/base/event"
+	// "github.com/flOuGH/TangSengDaoDaoServer/modules/base/event"
 
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/config"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/module"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/server"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/config"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/module"
+	"github.com/flOuGH/TangSengDaoDaoServerLib/server"
 )
 
 // UID 测试用户ID
