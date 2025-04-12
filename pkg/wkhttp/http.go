@@ -65,6 +65,18 @@ func (c *Context) ResponseError(err error) {
 	})
 }
 
+func (c *Context) ResponseBinary(data []byte) {
+	c.Writer.Header().Set("Content-Type", "application/octet-stream")
+	c.Writer.Header().Set("Content-Length", strconv.Itoa(len(data)))
+	c.Writer.WriteHeader(http.StatusOK)
+	_, err := c.Writer.Write(data)
+	if err != nil {
+		c.Writer.Header().Set("Content-Type", "application/octet-stream")
+		c.Writer.Header().Set("Content-Length", strconv.Itoa(0))
+		c.Writer.WriteHeader(http.StatusBadRequest)
+	}
+}
+
 // ResponseErrorf ResponseErrorf
 func (c *Context) ResponseErrorf(msg string, err error) {
 	if err != nil {
