@@ -7,10 +7,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/flOuGH/TangSengDaoDaoServerLib/config"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/register"
 	"github.com/gocraft/dbr/v2"
 	migrate "github.com/rubenv/sql-migrate"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/config"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/register"
 )
 
 func Setup(ctx *config.Context) error {

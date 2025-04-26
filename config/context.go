@@ -6,17 +6,17 @@ import (
 
 	"github.com/RussellLuo/timingwheel"
 	"github.com/bwmarrin/snowflake"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/common"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/cache"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/db"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/log"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/pool"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/redis"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/wkevent"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/wkhttp"
 	"github.com/gocraft/dbr/v2"
 	"github.com/olivere/elastic"
 	"github.com/opentracing/opentracing-go"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/common"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/cache"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/db"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/log"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/pool"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/redis"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/wkevent"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/wkhttp"
 )
 
 // Context 配置上下文
@@ -35,11 +35,9 @@ type Context struct {
 	tracer         *Tracer                  // 调用链追踪
 	aysncTask      *AsyncTask               // 异步任务
 	timingWheel    *timingwheel.TimingWheel // Time wheel delay task
-
-	httpRouter *wkhttp.WKHttp
-
-	valueMap  sync.Map
-	SetupTask bool // 是否安装task
+	httpRouter     *wkhttp.WKHttp
+	valueMap       sync.Map
+	SetupTask      bool // 是否安装task
 }
 
 // NewContext NewContext
@@ -121,7 +119,6 @@ func (c *Context) Cache() cache.Cache {
 
 // 认证中间件
 func (c *Context) AuthMiddleware(r *wkhttp.WKHttp) wkhttp.HandlerFunc {
-
 	return r.AuthMiddleware(c.Cache(), c.cfg.Cache.TokenCachePrefix)
 }
 

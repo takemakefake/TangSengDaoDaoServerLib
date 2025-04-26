@@ -3,8 +3,8 @@ package config
 import (
 	"errors"
 
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/network"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/util"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/network"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/util"
 )
 
 // IMStreamStart 消息流开始

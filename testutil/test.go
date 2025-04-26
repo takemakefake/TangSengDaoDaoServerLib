@@ -1,11 +1,11 @@
 package testutil
 
 import (
-	// "github.com/flOuGH/TangSengDaoDaoServer/modules/base/event"
+	// "github.com/takemakefake/TangSengDaoDaoServer/modules/base/event"
 
-	"github.com/flOuGH/TangSengDaoDaoServerLib/config"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/module"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/server"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/config"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/module"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/server"
 )
 
 // UID 测试用户ID

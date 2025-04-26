@@ -159,7 +159,6 @@ type TLog struct {
 
 // NewLIMLog NewLIMLog
 func NewTLog(prefix string) *TLog {
-
 	return &TLog{prefix: prefix}
 }
 

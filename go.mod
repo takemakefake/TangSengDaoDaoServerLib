@@ -1,4 +1,4 @@
-module github.com/flOuGH/TangSengDaoDaoServerLib
+module github.com/takemakefake/TangSengDaoDaoServerLib
 
 go 1.20
 

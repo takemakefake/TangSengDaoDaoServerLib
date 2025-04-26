@@ -1,7 +1,6 @@
 package redis
 
 import (
-	"errors"
 	"time"
 
 	rd "github.com/go-redis/redis"
@@ -172,17 +171,12 @@ func (rc *Conn) Hmget(key string, field ...string) ([]string, error) {
 	return nil, nil
 }
 
-func (rc *Conn) Hmset(key string, fieldValues ...string) error {
-
-	if len(fieldValues)%2 != 0 {
-		return errors.New("redis hmset操作失败【fieldValues不能为单数！】")
+func (rc *Conn) Hmset(key string, fieldsAndValues map[string]string) error {
+	vals := make(map[string]any, len(fieldsAndValues))
+	for k, v := range fieldsAndValues {
+		vals[k] = v
 	}
-	fieldValueMap := map[string]interface{}{}
-	for i := 0; i < len(fieldValues); i += 2 {
-		fieldValueMap[fieldValues[i]] = fieldValues[i+1]
-	}
-
-	return rc.client.HMSet(key, fieldValueMap).Err()
+	return rc.client.HMSet(key, vals).Err()
 }
 
 /*

@@ -7,10 +7,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/cache"
-	"github.com/flOuGH/TangSengDaoDaoServerLib/pkg/log"
 	"github.com/gin-gonic/gin"
 	"github.com/opentracing/opentracing-go"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/cache"
+	"github.com/takemakefake/TangSengDaoDaoServerLib/pkg/log"
 	"go.uber.org/zap"
 )
 
@@ -266,6 +266,7 @@ func (l *WKHttp) AuthMiddleware(cache cache.Cache, tokenPrefix string) HandlerFu
 
 	return func(c *Context) {
 		token := c.GetHeader("token")
+		log.Info("token", zap.String("token", token))
 		if token == "" {
 			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{
 				"msg": "token不能为空，请先登录！",

@@ -1,6 +1,6 @@
 package model
 
-import "github.com/flOuGH/TangSengDaoDaoServerLib/config"
+import "github.com/takemakefake/TangSengDaoDaoServerLib/config"
 
 type ChannelResp struct {
 	Channel struct {
